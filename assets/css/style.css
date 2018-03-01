@@ -5,14 +5,19 @@ h1, h2, h3 {
 
 h1 {
     font-size: 30px;
+    font-weight: bold;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 0 20px 0;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 10px 0 20px 0;
 }
 
 hr {
@@ -130,15 +135,16 @@ header li a:hover {
     float: left;
 }
 
-.main_section #bio_img {
-    padding: 0px;
-    margin-left: 0;
-    float: left;
+
+.main_section .bio {
+    line-height: 150%;
+    padding: 20px 0;
 }
 
 .main_section #bio_img img {
-    padding: 0;
-    margin: 0;
+    padding: 0px 15px 10px 0;
+    margin-left: 0;
+    float: left;
 }
 
 .main_section #portfolio_images {
@@ -223,7 +229,7 @@ header li a:hover {
 
 .social_nav {
     list-style-type: none;
-    padding: 10px 10px;
+    padding: 20px 10px;
     margin: auto;
     height: 60px;
 }
@@ -241,7 +247,7 @@ header li a:hover {
 .footer {
     position: fixed;
     bottom: 0;
-    background:#666;
+    background:#666666;
     color: #fff;
     border-top: 5px solid #4aaaa5;
     height: 100px;
