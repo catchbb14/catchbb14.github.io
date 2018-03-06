@@ -261,3 +261,176 @@ header li a:hover {
     clear: both;
     text-align: center;
 }
+
+@media screen and (max-width: 980px) {
+    
+    .header_container {
+        width: 768px;
+    }
+    
+    .container {
+        width: 768px;
+        box-sizing: border-box;
+    }
+
+    .main_section {
+        width: 450px;
+        box-sizing: border-box;
+    }
+
+    .main_section .bio figure {
+        width: 230px;
+        margin-right: auto;
+        margin-left: auto;
+        float: none;
+        overflow: auto;
+    }
+
+    .main_section p {
+        margin-top: 10px;
+        float: none;
+    }
+
+    .main_section #portfolio_images ul {
+        width: 285px;
+    }
+
+    .main_section #portfolio_images li {
+        margin-left: 62.5px;
+    }
+    
+    .main_section #portfolio_images li:nth-child(even) {
+        margin-left: 62.5px;
+    }
+
+    .main_section input[type=submit] {
+        width: 130px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .header_container {
+        width: 640px;
+    }
+    
+    .container {
+        width: 640px;
+        box-sizing: border-box;
+    }
+
+    .main_section {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .main_section .bio figure {
+        width: 230px;
+        padding-right: 15px;
+        float: left;
+        overflow: auto;
+    }
+
+    .main_section p {
+        margin-top: 0;
+    }
+
+    .main_section #portfolio_images li {
+        float: left;
+        padding: 20px 0;
+        height: 180px;
+        position: relative;
+        margin-left: 0;
+    }
+    
+    .main_section #portfolio_images li:nth-child(even) {
+        margin-left: 30px;
+    }
+    
+    .main_section #portfolio_images figure {
+        margin:0;
+        height: 180px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin: 30px 0;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and  (max-width: 640px) {
+    .header_container {
+        width: 100%;
+        position: static;
+        height: 150px;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+
+    header h1 {
+        width: 100%;
+        display: block;
+    }
+
+    header .header_nav {
+        width: 100%;
+        height: 50px;
+        position: relative;
+    }
+
+    header .header_nav ul {
+        width: 100%;
+        height: 50px;
+        padding: 0;
+        background: #fff;
+        margin-bottom: 15px;
+    }
+
+    header .header_nav li {
+        width:33.3333%;
+        box-sizing: border-box;
+        padding: 10px;
+        border: none;
+    }
+    
+    .container {
+        width: calc(100% - 30px);
+        box-sizing: border-box;
+        margin-top: 50px;
+    }
+
+    .main_section {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .main_section .bio figure {
+        width: 230px;
+        margin-right: auto;
+        margin-left: auto;
+        float: none;
+        overflow: auto;
+    }
+
+    .main_section p {
+        margin-top: 10px;
+        float: none;
+    }
+
+    .main_section #portfolio_images ul {
+        width: 285px;
+    }
+
+    .main_section #portfolio_images li {
+        margin-left: calc((100% - 315px)/2);
+    }
+    
+    .main_section #portfolio_images li:nth-child(even) {
+        margin-left: calc((100% - 315px)/2);
+    }
+
+    .main_section input[type=submit] {
+        width: 130px;
+    }
+}
