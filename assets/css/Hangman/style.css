@@ -1,0 +1,49 @@
+.gallows{
+    margin-left: 25%; height: 386px; width: 267px;
+}
+
+#textToDisplay {
+    letter-spacing: .5em;
+}
+
+body {
+    background: url(../../Images/Hangman/background.jpg);
+    background-size: 100% 900px;
+    background-repeat: no-repeat;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 400;
+}
+
+.card-header {
+    background: #0064EB;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+}
+
+.card-body {
+    background: #EED995;
+}
+
+.image-container {
+    background:none;
+}
+
+.hangman-card {
+    background: none;
+    border: none;
+}
+
+.jumbotron {
+    background: none;
+}
+
+.jumbotron h1 {
+    font-size: 50px;
+}
+
+.list-header {
+    font-size: 24px;
+    background: none;
+}
+
