@@ -2,16 +2,14 @@
     margin-left: 25%; height: 386px; width: 267px;
 }
 
-#textToDisplay {
-    letter-spacing: .5em;
+#wrapper {
+    background: url(../../Images/Hangman/background.jpg);
+    background-size: 100% 95%;
+    background-repeat: no-repeat;
 }
 
-body {
-    background: url(../../Images/Hangman/background.jpg);
-    background-size: 100% 900px;
-    background-repeat: no-repeat;
-    font-family: 'Indie Flower', cursive;
-    font-weight: 400;
+#textToDisplay {
+    letter-spacing: .5em;
 }
 
 .card-header {
@@ -47,3 +45,7 @@ body {
     background: none;
 }
 
+.container {
+    font-family: 'Indie Flower', cursive;
+    font-weight: 400;
+}

@@ -173,6 +173,7 @@ header li a:hover {
 .main_section #portfolio_images figure {
     margin:0;
     height: 180px;
+    width: 285px;
 }
 
 .main_section #portfolio_images figcaption {
