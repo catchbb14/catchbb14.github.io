@@ -127,20 +127,20 @@
         }
 
         changeImageIncorrect() {
-            imagePath = 'assets/Images/Hangman/hangman-' + this.guessesLeft + '.png';
+            imagePath = 'assets/images/Hangman/hangman-' + this.guessesLeft + '.png';
             document.getElementById("hangman").setAttribute('src',imagePath);
             document.getElementById("hangman").setAttribute('class',"card-img-top gallows");
         }
 
         changeImageVictory() {
-            imagePath = 'assets/Images/Hangman/hangman-win.png';
+            imagePath = 'assets/images/Hangman/hangman-win.png';
             document.getElementById("hangman").setAttribute('src',imagePath);
             document.getElementById("hangman").setAttribute('class',"card-img-top text-center");
             document.getElementById("hangman").setAttribute('style',"height:386px; width:267px;");
         }
 
         changeImageLoss() {
-            imagePath = 'assets/Images/Hangman/hangman-loss.png';
+            imagePath = 'assets/images/Hangman/hangman-loss.png';
             document.getElementById("hangman").setAttribute('src',imagePath);
             document.getElementById("hangman").setAttribute('class',"card-img-top text-center");
             document.getElementById("hangman").setAttribute('style',"height:386px; width:267px;");
