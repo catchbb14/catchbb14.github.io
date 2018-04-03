@@ -8,7 +8,7 @@
      var currentGame;
      var imagePath;
      var audioElement = document.createElement("audio");
-    audioElement.setAttribute('src', 'assets/Audio/Good_Vibrations.mp3');
+    audioElement.setAttribute('src', 'assets/audio/Good_Vibrations.mp3');
 
     var wins = 0;
     var losses = 0;
