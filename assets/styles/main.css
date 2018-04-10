@@ -1,0 +1,66 @@
+body {
+    background: url('../images/background.jpeg');
+}   
+
+h1 {
+    font-size: 48px;    
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+
+.jumbotron {
+    background: rgb(51, 50, 50) ;
+    opacity: .85;
+    color: ghostwhite;
+    width: 100%;
+    padding: 10px 10px;
+    border-bottom: 2px solid grey;   
+}
+
+.card {
+    background: none;
+    border: none;
+}
+.card-header { 
+    background: rgb(245, 233, 126) !important;
+    color: grey;
+    font-size: 20px;
+    font-weight: 800;
+    border: 2px solid grey;
+}
+.card-body {
+    background: none !important;
+    color: ghostwhite;
+    padding: 20px 0;
+}
+.table {
+    background: grey !important;
+    opacity: .75;
+    font-weight: 500;   
+}
+
+thead {
+    background: rgb(51, 50, 50) ;
+    opacity: 1;
+    font-size: 18px;
+    font-weight: 600;
+}
+#input-form form {
+    background: grey !important;
+    opacity: .75;
+    padding: 10px;
+    font-weight: 500;
+}
+.container {
+    /* background: rgb(207, 207, 207) !important;     */
+    background: none;
+}
+.btn {
+    background: rgb(245, 233, 126) !important;
+    color: grey; 
+    font-weight: 700;
+}
+
+.btn:hover {
+    border-color: white;
+}
