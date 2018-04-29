@@ -1,0 +1,55 @@
+body {
+    background-image: url("../images/pokemon-background2.jpg");
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: #E5DA2A;
+}
+
+.pokemon-thumbnail {
+    height: 180px;
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.pokemon-thumbnail:nth-child(odd) {
+    margin-right: 40px;
+}
+
+.pokemon-thumbnail:hover {
+    border: 2px solid green;
+}
+
+.pokemon-thumbnail:active {
+    background-color:green;
+}
+
+.enemy-thumbnail:hover {
+    border: 2px solid red;
+}
+
+.enemy-thumbnail:active {
+    background-color:red;
+}
+
+.enemies {
+    height: 150px;
+    width: 150px;
+}
+
+.middle #button-container {
+    margin-top: 20%;
+}
+
+.captured {
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+    border: none;
+}
+
+.card-header {
+    background: #cc0000;
+    opacity: .8;
+}
