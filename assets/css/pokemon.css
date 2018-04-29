@@ -1,6 +1,7 @@
 body {
-    background-image: url("../images/pokemon-background2.jpg");
+    background-image: url("../images/pokemon/pokemon-background2.jpg");
     background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 h1 {

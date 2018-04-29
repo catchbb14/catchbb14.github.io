@@ -3,7 +3,7 @@
 }
 
 #wrapper {
-    background: url(../../images/Hangman/background.jpg);
+    background: url("../images/hangman/background.jpg");
     background-size: 100% 95%;
     background-repeat: no-repeat;
 }

@@ -34,10 +34,10 @@
     var enemyPokemon;  
 
     function resetGame() {
-        pikachu = new Pokemon("Pikachu", "assets/images/pikachu-name.png", "assets/images/pikachu.png", 120, 8, 15);
-        charmander = new Pokemon("Charmander", "assets/images/charmander-name.png", "assets/images/charmander.png", 100, 15, 5);
-        bulbasaur = new Pokemon("Bulbasaur", "assets/images/bulbasaur-name.png", "assets/images/bulbasaur.png", 150, 9, 20);
-        squirtle = new Pokemon("Squirtle", "assets/images/squirtle-name.png", "assets/images/squirtle.png", 180, 6, 25);
+        pikachu = new Pokemon("Pikachu", "assets/images/pokemon/pikachu-name.png", "assets/images/pokemon/pikachu.png", 120, 8, 15);
+        charmander = new Pokemon("Charmander", "assets/images/pokemon/charmander-name.png", "assets/images/pokemon/charmander.png", 100, 15, 5);
+        bulbasaur = new Pokemon("Bulbasaur", "assets/images/pokemon/bulbasaur-name.png", "assets/images/pokemon/bulbasaur.png", 150, 9, 20);
+        squirtle = new Pokemon("Squirtle", "assets/images/pokemon/squirtle-name.png", "assets/images/pokemon/squirtle.png", 180, 6, 25);
 
         characterList = [pikachu, charmander, bulbasaur, squirtle];
         enemyList = [];
@@ -46,7 +46,11 @@
         $("#player").toggle();
         updateCaptured();
         updateEnemiesLeft();
-        updateStats();
+        if(yourPokemon !== undefined) {
+            console.log(yourPokemon)
+            updateStats();
+            
+        }
 
         $("#sec-heading").text("Please Select Your Character!");
 
