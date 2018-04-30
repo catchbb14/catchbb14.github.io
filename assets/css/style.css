@@ -189,6 +189,18 @@ header li a:hover {
     line-height: 50px;
 }
 
+.main-section #project-images {
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+    overflow: auto;
+}
+
+.main-section #project-images li a img {
+    width: 610px;
+    height: 180px;
+}
+
 .main_section form {
     padding: 20px 0;
 }
@@ -307,7 +319,6 @@ header li a:hover {
     .main_section input[type=submit] {
         width: 130px;
     }
-
 }
 
 @media screen and (max-width: 768px) {
