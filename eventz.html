@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Eventz</title>
+
+    <!-- include bootstrap library for bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- include lightbox css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+    <!-- include slickjs css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- include google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <!-- include google font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Custom styles -->
+    <link href="assets/css/eventz.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#">Eventz</a>
+        <img src="assets/images/eventz-logo.png">
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="signinDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sign In
+              </a>
+              <div class="dropdown-menu" style="width: max-content">
+                  <form class="px-4 py-3">
+                    <div class="form-group">
+                      <label for="signinEmail">Email address</label>
+                      <input type="email" class="form-control" id="signinEmail" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="signinPassword">Password</label>
+                      <input type="password" class="form-control" id="signinPassword" placeholder="Password">
+                    </div>
+                    <button type="submit" id="signinButton" class="btn btn-primary">Sign in</button>
+                  </form>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" data-toggle="modal" data-target="#signupModal" href="#signupModal">Sign up</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#signupModal" href="#signupModal" >Sign Up</a>
+              <div class="modal" id="signupModal" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="signupModalLabel">Sign Up!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="sign-up-form">
+                          <div class="form-group">
+                            <label for="user-email" class="col-form-label">Email:</label>
+                            <input type="email" class="form-control" id="user-email" placeholder="email@example.com" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="user-password" class="col-form-label">Password:</label>
+                            <input type="password" class="form-control" id="user-password" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="user-city" class="col-form-label">City:</label>
+                            <input type="text" class="form-control" id="user-city" placeholder="ex: Boston" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="user-state" class="col-form-label">State:</label>
+                            <select class="form-control state-list" id="user-state" required>
+                              <option value="">Select a State</option>
+                            </select>
+                          </div>
+                          <button type="submit" class="btn btn-primary" id="submitNewUser">Sign Up!</button> 
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </li>
+            <li class="nav-item">
+              <a id="logout" class="nav-link rounded" href="Javascript:">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-center">
+      <div class="container">
+        <h4>Eventz is a great way to search for popular events by city, state and or zip code!</h4>
+        <div class="col-md-4 float-left">
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group search-form">
+              <h6 class="text-left">Search Eventz</h6>
+              <div class="col-12">
+                <input id="search-event" class="effect-1" type="text" placeholder="Eventz">
+                <span class="focus-border"></span>
+              </div>
+              <div class="col-12">
+                <input id="search-city" class="effect-1" type="text" placeholder="City">
+                <span class="focus-border"></span>
+              </div>
+              <div class="col-12">
+                <input id="search-state" class="effect-1" type="text" placeholder="State">
+                <span class="focus-border"></span>
+              </div>
+              <div class="col-12">
+                <input id="search-zipcode" class="effect-1" maxlength="5" type="text" placeholder="Zip Code">
+                <span class="focus-border"></span>
+              </div>
+            </div>
+            <button id="search" type="submit" class="btn btn-search-submit float-left">Search</button>
+          </form>
+        </div>
+          <div class="col-md-8 float-left text-left">
+            <div class="">
+              <div>Suggested Searches</div>
+              <div>
+                <div>Most Recent Event Searches:</div>
+                <div id="recent-event-searches"></div>
+              </div>
+            </div>
+            <div class="">Most Popular Event Searches: </div>
+              <div id="popular-event-searches"></div>
+          </div>
+      </div>
+    </header>
+
+    <!-- Event Grid Section -->
+    <section class="events" id="events">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0" style="margin-bottom: 30px !important;">Events</h2>
+        <div>Filter by category:</div>
+        <div id="category-buttons"></div>
+        <div class="events-list">
+          
+        </div>
+        <!-- THIS HTML THAT IS COMMENTED OUT IS THE EVENT TEMPLATE.
+            WE TOOK THIS TEMPLATE AND LOOPED THROUGH IT IN OUR JAVASCRIPT
+            TO CREATE A LIST, AND APPENDED THAT LIST HERE. WE WILL REMOVE THIS
+            WHEN WE SUBMIT OUR FINAL PROJECT. LEAVING THIS IN HERE FOR NOW FOR
+            REFERENCING
+         -->
+          <!-- <div class="row">
+            <div class="col-md-12 event-item">
+              <div class="col-md-3 float-left">
+                <img src="${eventImage}">
+              </div>
+              <div class="col-md-6 float-left text-left">
+                <h6>${eventName}</h6>
+                <h4>Venue: ${venueName}</h4>
+                <h6>${eventDate}</h6>
+                <button class="btn btn-venue-details">Venue Details</button>
+                <button class="btn btn-event-details">Event Details</button>
+              </div>
+              <div class="col-md-3 float-left">
+                <h6>Eric's weather widget here</h6>
+              </div>
+            </div>
+          </div>
+          <hr> -->
+      </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="weather" class="bg-primary text-white">
+      <div class="container">
+      
+        <h2 class="text-center text-uppercase text-white">Search Weather for {<span id="cityName">City</span>}</h2>
+        <hr class="star-light">
+        
+        <div id="weatherWidget" class="row">
+          <div id="current" class="col-lg-3 ml-auto">
+            <div id="currentTitle"></div>
+            <div id="currentWidget" class="row text-center"></div>
+          </div>
+      
+          <div id="forecast" class="col-lg-9 ml-auto">
+            <div id="forecastTitle"></div>
+              <div id="forecastWidgets" class="row text-center">
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <div class="container">
+          <div class="form-group search-form">
+            <h6 class="text-left">Search Weather</h6>
+            <input id="cityWeather" type="text" class="form-control" placeholder="City">
+            <input id="zipcodeWeather" type="text" class="form-control" placeholder="Zip Code">
+          </div>
+          <button id="searchWeather" type="submit" class="btn btn-search-submit float-left">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h4 class="text-uppercase mb-4">Location</h4>
+            <p class="lead">1234 Thecoolest Dr.
+              <br>Morrisville, NC</p>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-uppercase mb-4">Socialize with us!</h4>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-google-plus-square"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-twitter-square"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-uppercase mb-4">About Eventz</h4>
+            <p class="lead mb-0">Eventz is the baddest search site out there.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="container">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div id="event-modal" class="modal-content">
+
+          </div>
+        </div>
+      </div>
+    </div> <!-- end modal -->
+
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Listin' eventz since 2018.</small>
+      </div>
+    </div>
+
+    <!-- All the JavaScripts -->
+    <!-- include font awesome library for icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" />
+    <!-- include moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js"></script>
+    <!-- include jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- include jquery ui -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- include bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- include lightbox js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+    <!-- include isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!-- include slick.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <!-- Custom JavaScripts -->
+    <script src="assets/scripts/eventz/database.js"></script>
+    <script src="assets/scripts/eventz/main.js"></script>
+    <script src="assets/scripts/eventz/popular-search.js"></script>
+    <script src="assets/scripts/eventz/ticketmaster.js"></script>
+    <script src="assets/scripts/eventz/weatherbit.js"></script>
+    <script src="assets/scripts/eventz/openweather.js"></script>
+    <script src="assets/scripts/eventz/save-to-favorites.js"></script>
+    <script src="assets/scripts/eventz/user.js"></script>
+    <script src="assets/scripts/eventz/search-validation.js"></script>
+  </body>
+
+</html>
